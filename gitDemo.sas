@@ -24,7 +24,7 @@ run;
 title;
 
 *add table of means;
-title 'Cross Table';
+title 'Cross Table Report';
 proc tabulate data=sashelp.cars f=dollar14.2;
 class Make Type;
 var MSRP;
