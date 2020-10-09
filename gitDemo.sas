@@ -16,7 +16,7 @@ proc sgplot data=sashelp.cars;
     stat=mean;
 run;
 
-title 'Interactive Scatter Plot';
+title 'Interactive Scatter Plot Custom Part';
 *insert scatter plot with tooltips;
 proc sgplot data=Sashelp.Cars;
 scatter x=Weight y=MPG_City;
