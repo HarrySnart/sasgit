@@ -1,10 +1,24 @@
 *Simple demo to show creating SAS Report via a Git Clone;
-
 ods _all_ close;
 ods listing image_dpi=300;
+filename odsout "/home/sasdemo/git/gssODS.html" mod;
 
 *create new ODS output;
-ods html5 body='/home/sasdemo/git/demoGIT.htm'  options(svg_mode='inline') ;
+
+data _null_;
+     file odsout;
+     put '<html>';
+     put '<HEAD>';
+	 put '<center><img src="https://svg-clipart.com/svg/white/GH87GHT-black-sedan-car-vector.svg" alt="logo"/></center>';
+     put '<TITLE>SAS Output</TITLE>';
+	 put '<head><link rel="stylesheet" href="mystyle2.css"></head>';
+     put '</HEAD>';
+     put "<BODY class='body'>";
+     put '<h1><center>Cars Report</h1>';
+	 put '<p><center>This report shows an example of adding HTML output to ODS</p>';
+   run;
+
+ods html5 path = '/home/sasdemo/git' body=odsout(notop) options(svg_mode='inline') style=raven;
 
 title 'Interactive Bar Plot';
 ods graphics on / imagemap  noborder  outputfmt=svg; /* enable data tips */
@@ -32,4 +46,6 @@ table Make,Type*MSRP*mean;
 run;
 title;
 
-ODS HTML5 CLOSE; 
+ODS html5 CLOSE; 
+
+filename odsout clear;
