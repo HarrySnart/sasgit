@@ -9,7 +9,7 @@ data _null_;
      file odsout;
      put '<html>';
      put '<HEAD>';
-	 put '<center><img src="https://svg-clipart.com/svg/white/GH87GHT-black-sedan-car-vector.svg" alt="logo"/></center>';
+	 put '<center><img align="centre" src="https://www.sas.com/etc/designs/saswww/apple-touch-icon-152x152.png" style="width:152px;height:152px;"></img></center>';
      put '<TITLE>SAS Output</TITLE>';
 	 put '<head><link rel="stylesheet" href="mystyle2.css"></head>';
      put '</HEAD>';
