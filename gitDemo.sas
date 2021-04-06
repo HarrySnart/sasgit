@@ -14,7 +14,7 @@ data _null_;
 	 put '<head><link rel="stylesheet" href="mystyle2.css"></head>';
      put '</HEAD>';
      put "<BODY class='body'>";
-     put '<h1><center>Cars Report for GSS</h1>';
+     put '<h1><center>Cars Report for SAS Presentation</h1>';
 	 put '<p><center>This report shows an example of adding HTML output to ODS</p>';
    run;
 
