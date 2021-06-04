@@ -1,5 +1,7 @@
 
 %macro loadJSON(files);
+
+/* Useful Macro for Loading JSON Data over HTTP */
 data _null_; 
      set &files; 
      call symput('url' || trim(left(_N_)), trim(left(url))); 
