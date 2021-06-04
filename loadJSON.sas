@@ -1,5 +1,10 @@
 
 %macro loadJSON(files);
+
+/* 
+This file loads a series of JSON datasets into a single dataset.
+*/
+
 data _null_; 
      set &files; 
      call symput('url' || trim(left(_N_)), trim(left(url))); 
